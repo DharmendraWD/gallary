@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallary</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 gallaryMainWrapper"
+        id="gallaryMainWrapper">
+
+
+
+        <!-- Modal Overlay -->
+        <div id="gallaryModalOverlay"
+            class="gallary-overlay flex fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+            <div id="gallaryprogressBarContainer">
+                <div id="gallaryprogressBar"></div>
+            </div>
+
+
+            <div class="optionOfGallary absolute z-[999] top-[0] right-[22px] gap-[15px] flex">
+                <i class="ri-zoom-in-fill text-[greenyellow] gallaryMenusBtn cursor-pointer" title="Zoom"
+                    id="gallaryZoomBtn"></i>
+                <i class="ri-layout-grid-2-fill text-[#ce9aff] gallaryMenusBtn cursor-pointer" id="toggleBtnGallayGrid"
+                    title="Toggle Thumbnail"></i>
+                <i class="ri-slideshow-2-fill text-[royalblue] gallaryMenusBtn cursor-pointer" id="gallarySlideShow"
+                    title="Slide Show"></i>
+                <i class="ri-xrp-line text-[red] gallaryMenusBtn cursor-pointer" id="closeGalaryImage"
+                    title="Close"></i>
+            </div>
+
+            <!-- Modal Content -->
+            <div id="gallaryModalBox"
+                class="gallary-box bg-white p-6 rounded-lg w-[100%] lg:w-[80%] lg:h-[80%] shadow-lg gallary-modal-enter flex flex-col justify-center items-center h-[auto]">
+                <img src="images/65GA_20810724.jpg" alt="" id="largeImageClciked"
+                    class="w-[auto] h-[100%] object-cover mx-auto">
+                <p class="gallary-description mb-4 absolute bottom-[-15px]" id="gallaryDescription">
+                </p>
+
+                <!-- button s  -->
+                <div class="gallaryNextPrevBtn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-between w-full px-4"
+                    id="gallaryNextPrevBtn">
+                    <i class="ri-arrow-left-s-line" id="gallaryImgPrev29"></i>
+                    <i class="ri-arrow-right-s-line" id="gallaryImgNext29"></i>
+                </div>
+            </div>
+
+
+            <!-- grid view  -->
+            <div class="gridThumbnailParent bg-[#696969ab] absolute gallaryGridInbOttom" id="gridThumbnailParent">
+                <div id="gridPanelGallaery"
+                    class="flex mx-auto max-w-[90%] overflow-x-auto whitespace-nowrap gap-[7px]">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+<script>
+    // const toggleBtnGallayGrid = document.getElementById('toggleBtnGallayGrid');
+    // const gridPanelGallaery = document.getElementById('gridPanelGallaery');
+
+    // let isOpenGallaryGrid = false;
+
+    // toggleBtnGallayGrid.addEventListener('click', () => {
+    //     if (!isOpenGallaryGrid) {
+    //         gridPanelGallaery.classList.remove('max-h-0', 'opacity-0');
+    //         gridPanelGallaery.classList.add('max-h-[max-content]', 'opacity-100');
+    //     } else {
+    //         gridPanelGallaery.classList.remove('max-h-40', 'opacity-100');
+    //         gridPanelGallaery.classList.add('max-h-0', 'opacity-0');
+    //     }
+    //     isOpenGallaryGrid = !isOpenGallaryGrid;
+    // });
+
+</script>
+
+</html>
